@@ -1,4 +1,5 @@
-/* Solving the business problem for the charity "Education For All" 
+/* CAPSTONE PROJECT
+ Solving the business problem for the charity "Education For All" 
 
  With the datasets 
 Donation_Data = id, first_name, last_name, email, gender, job_field, donation, state, shirt_size
