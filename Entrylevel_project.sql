@@ -23,7 +23,7 @@ With cte1 AS (
       SELECT *, 
       CASE WHEN fcollege = 'yes' THEN 1
       ELSE 0
-      END As check_fath_colg,
+      END AS check_fath_colg,
       CASE WHEN  fcollege = 'no' THEN 1
       ELSE 0
       END AS check_fath_ncolg
@@ -45,7 +45,7 @@ With cte1 AS (
       SELECT *, 
       CASE WHEN mcollege = 'yes' THEN 1
       ELSE 0
-      END As check_moth_colg,
+      END AS check_moth_colg,
       CASE WHEN  mcollege = 'no' THEN 1
       ELSE 0
       END AS check_moth_ncolg
@@ -74,8 +74,8 @@ WITH cte3 AS (
     AND fcollege = 'no'
     AND mcollege = 'no'
     AND home = 'no'
-    and income = 'low'
-    group by 1)
+    AND income = 'low'
+    group BY 1)
     
 SELECT *
 from cte4;
@@ -92,5 +92,5 @@ SELECT education,
        ROUND(SUM(academic_score) OVER (PARTITION BY education,ethnicity), 2) AS sum_acad_score_ethnicity
 FROM student_academic_info
 JOIN student_personal_details
-on student_academic_info.personal_id = student_personal_details.personal_id
+ON student_academic_info.personal_id = student_personal_details.personal_id
 WHERE education > 13;
